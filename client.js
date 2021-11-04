@@ -14,9 +14,16 @@ const connect = function () {
     console.log('Successfuly connected to game server');
   });
 
-  conn.on('connect', () => {
-    conn.write('Moj');
+  conn.on('connect', (data) => {
+    conn.write('Name: Moj');
+    // for (let i = 0; i < 10; i++) {
+    //   setTimeout(() => {
+    //     conn.write('Move: up');
+    //   }, 1000 * i);
+    // }
+    conn.write('Move: up');
   });
+
 
   conn.on("data", (data) => {
     console.log(data);
