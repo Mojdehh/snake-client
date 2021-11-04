@@ -16,12 +16,6 @@ const connect = function () {
 
   conn.on('connect', (data) => {
     conn.write('Name: Moj');
-    // for (let i = 0; i < 10; i++) {
-    //   setTimeout(() => {
-    //     conn.write('Move: up');
-    //   }, 1000 * i);
-    // }
-    // conn.write('Move: up');
   });
 
 
